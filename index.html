@@ -1,1 +1,9 @@
-"this is the very first line." 
+Tạo server 1024, 10GB, thêm một Virtual Network, cho server vào Virtual Network đó. Làm tương tự với Client. Cài xong thì đổi tắt mấy cái dialog, server là thuchanh1, client là thuchanh2.Đổi resolution 2 máy dcpromo để cài dns, ở client chờ server cài xong thì đổi group sang netclass. Ở bên server thì vào tạo Hocvien và Giaovien, trong Hocvien có an, Giaovien có binh, tạo luôn user ha trong Group Thuctap. Client cài xong thì mmc để thêm user tuan cho vào group Duan. 
+
+Tiếp theo và computer management để xem thông tin ổ C, trong C: tạo file nen, nen.txt “nen du lieu”, prop -> tick compress… để nén, tiếp theo thêm quota cho user ha 10Mb, 9 Mb. Tạo dungchung, dungchung.txt, “du lieu dung chung”, ở client vào user ha để đổi file “da sua” xong quay lại server dùng computer management check session. 
+
+Vào control panel cài DHCP, xong vào Start, Adminisive… bật Authorize cho DHCP và New Scope “Dia chi IP cho PhongKeToan 10.10.10.100->200, ressolve thuchanh1.netclass.edu.vn, ở Client sau khi log out user ha thì vào Admin để ipconfig /renew. Thử nslookup không được, vào Adminisive chọn DNS NewZone, New Pointer để nó trỏ về 10.10.10.2, thêm Alias www và ping thử ở client, và FTP luôn.
+
+Control panel cài FTP sau đấy vào Adminisive -> IIS -> FTP -> Thêm quyền Write cho FTP, tiếp đấy vào C:/itnetpub/ftproot cho full NTFS user ha. Ở Client ftp ftp.netclass.edu.vn rồi đăng nhập vào user ha. Tạo file testftp.txt “test ftp client/server” trở lại cmd lcd c:\  -> put testftp.txt nếu có số 13 là đỏ, check lại = list 22 13. 
+
+Vẫn ở client vào web thử www.netclass.edu.vn/iisstart.htm nếu thấy undercontructed là ok. Ở server vào Adminisive -> IIS -> WebSite -> New WebSite -> Second Web Site. Tạo C:\SecondWebSite\Default.htm “This is default website page.” Quay lại phần setup, đổi port 8080. Check lại ở client và lụm chuối.
